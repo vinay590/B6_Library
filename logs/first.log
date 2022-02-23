@@ -1,0 +1,75 @@
+[2022-02-03 12:45:38] INFO Log-In Homepage view
+[2022-02-03 12:45:38] INFO "GET /home/ HTTP/1.1" 200 11013
+[2022-02-03 12:45:50] INFO Log-In Homepage view
+[2022-02-03 12:45:50] INFO Log-New Book Object created: Book1
+[2022-02-03 12:45:50] INFO "POST /home/ HTTP/1.1" 302 0
+[2022-02-03 12:45:50] INFO Log-In Homepage view
+[2022-02-03 12:45:50] INFO "GET /home/ HTTP/1.1" 200 11012
+[2022-02-03 12:45:56] INFO Log-In Homepage view
+[2022-02-03 12:45:56] ERROR In exception: Field 'qty' expected a number but got ''.
+[2022-02-03 12:45:56] INFO "POST /home/ HTTP/1.1" 200 43
+[2022-02-03 12:45:58] INFO Log-In Homepage view
+[2022-02-03 12:45:58] INFO "GET /home/ HTTP/1.1" 200 11012
+[2022-02-03 12:45:59] INFO All data :- <QuerySet [<Book: csdcs>, <Book: gfgdg>, <Book: cds>, <Book: sss>, <Book: casc>, <Book: bfdbf>, <Book: fesef>, <Book: gdfgrdg>, <Book: gvrfgrg>, <Book: gdfrgrdg>, <Book: aaaaaa>, <Book: aaaaaa>, <Book: vdsvds>, <Book: dasdas>, <Book: Book1>]>
+[2022-02-03 12:45:59] INFO "GET /show-all-books/ HTTP/1.1" 200 27072
+[2022-02-03 12:46:23] INFO "POST /soft_delete/72 HTTP/1.1" 302 0
+[2022-02-03 12:46:23] INFO All data :- <QuerySet [<Book: csdcs>, <Book: gfgdg>, <Book: cds>, <Book: sss>, <Book: casc>, <Book: bfdbf>, <Book: fesef>, <Book: gdfgrdg>, <Book: gvrfgrg>, <Book: gdfrgrdg>, <Book: aaaaaa>, <Book: aaaaaa>, <Book: vdsvds>, <Book: dasdas>]>
+[2022-02-03 12:46:23] INFO "GET /show-all-books/ HTTP/1.1" 200 25994
+[2022-02-03 12:46:29] INFO All data :- <QuerySet [<Book: Book1>]>
+[2022-02-03 12:46:29] INFO "GET /show_soft_delete/%3E HTTP/1.1" 200 11446
+[2022-02-03 14:59:22] INFO Watching for file changes with StatReloader
+[2022-02-03 14:59:55] INFO D:\Vinay_Workbench\B6_Library\book\views.py changed, reloading.
+[2022-02-03 14:59:56] INFO Watching for file changes with StatReloader
+[2022-02-03 15:00:15] ERROR Internal Server Error: /aaa
+Traceback (most recent call last):
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Vinay_Workbench\B6_Library\book\views.py", line 148, in view_a
+    return render(request, 'view_a.html')
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: view_a.html
+[2022-02-03 15:00:15] ERROR "GET /aaa HTTP/1.1" 500 92961
+[2022-02-03 15:00:15] INFO "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 11479
+[2022-02-03 15:00:15] INFO "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 11275
+[2022-02-03 15:00:41] INFO D:\Vinay_Workbench\B6_Library\book\views.py changed, reloading.
+[2022-02-03 15:00:42] INFO Watching for file changes with StatReloader
+[2022-02-03 15:00:44] INFO D:\Vinay_Workbench\B6_Library\book\views.py changed, reloading.
+[2022-02-03 15:00:45] INFO Watching for file changes with StatReloader
+[2022-02-03 15:00:47] INFO D:\Vinay_Workbench\B6_Library\book\views.py changed, reloading.
+[2022-02-03 15:00:48] INFO Watching for file changes with StatReloader
+[2022-02-03 15:00:49] ERROR Internal Server Error: /aaa
+Traceback (most recent call last):
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Vinay_Workbench\B6_Library\book\views.py", line 148, in view_a
+    return render(request, 'view_a')
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Vinay_Workbench\b6_env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: view_a
+[2022-02-03 15:00:49] ERROR "GET /aaa HTTP/1.1" 500 92861
+[2022-02-03 15:01:39] WARNING Not Found: /
+[2022-02-03 15:01:39] WARNING "GET / HTTP/1.1" 404 13472
+[2022-02-03 15:01:43] INFO "GET /admin/ HTTP/1.1" 302 0
+[2022-02-03 15:01:43] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 11852
+[2022-02-03 15:01:43] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+[2022-02-03 15:01:43] INFO "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[2022-02-03 15:01:43] INFO - Broken pipe from ('127.0.0.1', 59737)
+
+[2022-02-03 15:01:43] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-02-03 15:01:58] INFO D:\Vinay_Workbench\B6_Library\book\views.py changed, reloading.
+[2022-02-03 15:01:58] INFO Watching for file changes with StatReloader
+[2022-02-03 15:02:00] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 11852
+[2022-02-03 15:02:14] INFO D:\Vinay_Workbench\B6_Library\B6_Library\settings.py changed, reloading.

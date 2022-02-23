@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>
+        All Books
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+    <body>
+        <h3  class="card-header" align="center" ><b>Soft Deleted Books</b></h3>
+        <a class="btn btn-primary"  href="{% url 'homepage' %}" >HOME</a>       
+        <br>
+        
+        <table  border=1 style="width: 60%" class="table table-dark table-hover" align="center" >
+            <tr> 
+                <th>BookID</th>
+                <th>BookName</th>
+                <th>BookPrice</th>
+                <th>BookQty</th>
+                <th>Action</th>
+            </tr>
+            {% for i in books %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.qty}}</td>
+                <td>
+                    <form action="{% url 'restore' i.id %}" method="POST">
+                        {% csrf_token%}
+                        <input type="submit" value="Restore" class="btn btn-success">
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5" align="center">No data Available</td></tr>
+            {% endfor %}
+        </table><br>
+        <br>
+        <form action="{% url 'soft_delete_all' %}" method="POST" align="center">
+            {% csrf_token %}
+            <a class="btn btn-primary" href="{% url 'show_all_books' %}">Show All Books</a>&nbsp;&nbsp;
+            <input type="submit" value="Soft Delete All" class="btn btn-danger">&nbsp;&nbsp;
+            
+        </form>
+        
+        
+        
+
+    </body>
+
+</html>
