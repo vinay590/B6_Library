@@ -31,12 +31,12 @@ urlpatterns = [
     path("restore/<int:id>",views.restore,name="restore"),
     path("soft_delete_all/>",views.soft_delete_all,name="soft_delete_all"),
     path('__debug__/', include('debug_toolbar.urls')),
-    path("form-home/",views.form_home,name="form_home"),
+    # path("form-home/",views.form_home,name="form_home"),
     path("post-list/",views.post_list,name="post_list"), ####paging
     
 
     ####Class Based 
-    path("home-cbv/",views.Homepage.as_view(),name="homepage"),
+    # path("home-cbv/",views.Homepage.as_view(),name="homepage"),
     path('Temp-view/',views.Temp_view.as_view(),name="Temp_view"),
     path('emp-gencreate/',views.Employeecreate.as_view(),name="Employeecreate"),
     path('emp-retr/',views.EmployeeRetrieve.as_view(),name="EmployeeRetrieve"),

@@ -165,55 +165,55 @@ from book.forms import AddressForm
 #### Assignment no 9
 ########## BookForm create object in db using forms
 ##function Based View
-def form_home(request):
-    if request.method == "POST":
-        print(request.POST)
-        print("In post")
-        form = BookForm(request.POST)
-        if form.is_valid:
-            # print(form.cleaned_data["name"])
-            form.save()
-            messages.success(request, 'Your Data was saved successfully!')
-            messages.info(request, 'Redirected to Form-home Page')
-        else:
-            messages.error(request, "Invalid data...!!")
-        return redirect("form_home")
+# def form_home(request):
+#     if request.method == "POST":
+#         print(request.POST)
+#         print("In post")
+#         form = BookForm(request.POST)
+#         if form.is_valid:
+#             # print(form.cleaned_data["name"])
+#             form.save()
+#             messages.success(request, 'Your Data was saved successfully!')
+#             messages.info(request, 'Redirected to Form-home Page')
+#         else:
+#             messages.error(request, "Invalid data...!!")
+#         return redirect("form_home")
         
-    elif request.method == "GET":
-        print("in get request")
-        context = {'form': BookForm()}
-        return render(request, "form_home.html", context )
-    else:
-        return HttpResponse("Invalid HTTP method")
+#     elif request.method == "GET":
+#         print("in get request")
+#         context = {'form': BookForm()}
+#         return render(request, "form_home.html", context )
+#     else:
+#         return HttpResponse("Invalid HTTP method")
 
 ######## HTTP Methods
 ## GET,POST,DELETE,PUT,PATCH
 
 ##### Class Based View
 
-from django.views import View
+# from django.views import View
  
-class Homepage(View):
-    def get(self, request):
-        print("ijn get")
-        return render(request, 'home.html')
+# class Homepage(View):
+#     def get(self, request):
+#         print("ijn get")
+#         return HttpResponse("in get")
 
-    def post(self, request):
-        print(request.POST)
-        print("in post request")
-        return HttpResponse("in Post")
+#     def post(self, request):
+#         print(request.POST)
+#         print("in post request")
+#         return HttpResponse("in Post")
 
-    def delete(self, request):
-        print("in delete request")
-        return HttpResponse("in delete")
+#     def delete(self, request):
+#         print("in delete request")
+#         return HttpResponse("in delete")
 
-    def put(self, request):
-        print("in put request")
-        return HttpResponse("in put")
+#     def put(self, request):
+#         print("in put request")
+#         return HttpResponse("in put")
  
-    def patch(self, request):
-        print("in patch request")
-        return HttpResponse("in patch")
+#     def patch(self, request):
+#         print("in patch request")
+#         return HttpResponse("in patch")
 
 
 from django.views.generic.base import TemplateView
