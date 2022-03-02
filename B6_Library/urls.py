@@ -20,6 +20,7 @@ from book  import views
 print("in urls.py")
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.homepage,name="homepage"),
     path('home/', views.homepage,name="homepage"),
     path('show-all-books/', views.show_all_books,name="show_all_books"),
     path("edit/<int:id>/",views.edit_data,name="edit"),

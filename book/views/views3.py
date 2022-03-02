@@ -196,7 +196,7 @@ from django.views import View
 class Homepage(View):
     def get(self, request):
         print("ijn get")
-        return HttpResponse("in Get")
+        return render(request, 'home.html')
 
     def post(self, request):
         print(request.POST)
